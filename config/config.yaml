@@ -1,0 +1,13 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv
+  local_data_file: artifacts/data_ingestion/iris.csv
+  unzip_dir: null   # No unzip needed, it's already a CSV
+
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE: artifacts/data_validation/status.txt
+  ALL_REQUIRED_COLUMNS: ["sepalLength", "sepalWidth", "petalLength", "petalWidth", "species"]
+  schema_file_path: config/schema.yaml
