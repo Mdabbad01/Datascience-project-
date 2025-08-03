@@ -1,0 +1,6 @@
+COLUMNS:
+  sepalLength: float
+  sepalWidth: float
+  petalLength: float
+  petalWidth: float
+  species: str

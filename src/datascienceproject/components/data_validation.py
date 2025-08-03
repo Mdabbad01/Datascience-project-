@@ -12,10 +12,9 @@ class DataValidation:
         try:
             validation_status = True
 
-            
-            data = pd.read_csv(self.config.unzip_data_path)
+            # Load the CSV file using correct path
+            data = pd.read_csv(self.config.local_data_file)
 
-            
             expected_columns = list(self.config.all_schema.keys())
             actual_columns = list(data.columns)
 

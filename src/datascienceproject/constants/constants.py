@@ -1,4 +1,4 @@
-import os
+from pathlib import Path
 
-CONFIG_FILE_PATH = os.path.join("config", "config.yaml")
-SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
+CONFIG_FILE_PATH = Path("config/config.yaml")
+SCHEMA_FILE_PATH = Path("config/schema.yaml")
