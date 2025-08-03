@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 from src.datascienceproject.components.data_ingestion import DataIngestion
-from src.datascienceproject.entity.config_entity import DataValidationConfig  # ✅ THIS LINE WAS MISSING
+from src.datascienceproject.entity.config_entity import DataValidationConfig 
 from src.datascienceproject import logger
 
 class DataValidation:
@@ -12,10 +12,10 @@ class DataValidation:
         try:
             validation_status = True
 
-            # Load the dataset
+            
             data = pd.read_csv(self.config.unzip_data_path)
 
-            # Check if all expected columns are present
+            
             expected_columns = list(self.config.all_schema.keys())
             actual_columns = list(data.columns)
 

@@ -1,18 +1,17 @@
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Dict
 
-@dataclass
-class DataValidationConfig:
-    root_dir: Path
-    unzip_data_path: Path
-    all_schema: Dict
-
-
 
 @dataclass
+class DataIngestionConfig:
+    root_dir: str
+    source_url: str
+    local_data_file: str
+
+
+@dataclass
 class DataValidationConfig:
-    root_dir: Path
-    unzip_data_dir: Path
+    root_dir: str
+    local_data_file: str
     all_schema: dict
-    STATUS_FILE: Path
+    STATUS_FILE: str

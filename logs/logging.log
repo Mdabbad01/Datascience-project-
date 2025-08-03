@@ -52,3 +52,218 @@ x==========x]
 [2025-08-02 21:20:12,905: INFO: main: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
 
 x==========x]
+[2025-08-03 17:23:14,825: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 17:23:14,848: ERROR: main: 'dict' object has no attribute 'data_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 15, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 15, in __init__
+    os.makedirs(self.config.data_validation.root_dir, exist_ok=True)
+AttributeError: 'dict' object has no attribute 'data_validation'
+[2025-08-03 17:24:45,289: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 17:24:45,293: ERROR: main: 'dict' object has no attribute 'data_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 15, in __init__
+    os.makedirs(self.config.data_validation.root_dir, exist_ok=True)
+AttributeError: 'dict' object has no attribute 'data_validation'
+[2025-08-03 17:27:53,827: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 17:27:53,830: ERROR: main: DataIngestionConfig.__init__() got an unexpected keyword argument 'source_URL']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 14, in initiate_data_ingestion
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 21, in get_data_ingestion_config
+    return DataIngestionConfig(
+TypeError: DataIngestionConfig.__init__() got an unexpected keyword argument 'source_URL'
+[2025-08-03 17:31:00,268: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 17:31:00,273: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 17:31:00,273: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 17:31:00,273: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 17:31:00,273: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 17:31:00,274: ERROR: main: 'DataValidationTrainingPipeline' object has no attribute 'run_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 30, in <module>
+    data_validation.run_validation()
+AttributeError: 'DataValidationTrainingPipeline' object has no attribute 'run_validation'
+[2025-08-03 17:47:28,095: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 17:47:28,100: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 17:47:28,101: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 17:47:28,101: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 17:47:28,101: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 17:47:28,101: ERROR: main: 'DataValidationTrainingPipeline' object has no attribute 'run_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 30, in <module>
+    data_validation.run_validation()
+AttributeError: 'DataValidationTrainingPipeline' object has no attribute 'run_validation'
+[2025-08-03 18:14:08,580: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:14:08,590: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:14:08,591: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 18:14:08,592: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:14:08,594: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:14:08,595: ERROR: main: 'DataValidationTrainingPipeline' object has no attribute 'run_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 30, in <module>
+    data_validation.run_validation()
+AttributeError: 'DataValidationTrainingPipeline' object has no attribute 'run_validation'
+[2025-08-03 18:17:11,962: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:17:11,979: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:17:11,979: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 18:17:11,980: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:17:11,980: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:17:11,981: ERROR: main: 'DataValidationTrainingPipeline' object has no attribute 'run_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 28, in <module>
+    data_validation.run_validation()
+AttributeError: 'DataValidationTrainingPipeline' object has no attribute 'run_validation'
+[2025-08-03 18:21:28,490: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:21:28,494: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:21:28,504: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 18:21:28,506: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:21:28,507: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:21:28,510: ERROR: main: 'DataValidationTrainingPipeline' object has no attribute 'run_validation']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 28, in <module>
+    data_validation.run_validation()
+AttributeError: 'DataValidationTrainingPipeline' object has no attribute 'run_validation'
+[2025-08-03 18:24:05,157: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:24:05,166: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:24:05,167: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 18:24:05,168: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:24:05,168: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:27:30,177: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:27:30,186: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:27:30,186: INFO: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-03 18:27:30,187: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:27:30,188: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:57:20,179: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 18:57:20,188: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 18:57:20,189: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 18:57:20,190: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 18:57:20,197: ERROR: main: DataValidationConfig.__init__() got an unexpected keyword argument 'unzip_data_path']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 27, in <module>
+    data_validation.initiate_data_validation()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_validation_pipeline.py", line 13, in initiate_data_validation
+    data_validation_config = config.get_data_validation_config()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 32, in get_data_validation_config
+    return DataValidationConfig(
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'unzip_data_path'
+[2025-08-03 19:05:23,999: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:05:24,009: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 19:05:24,010: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 19:05:24,012: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 19:09:52,130: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:09:52,140: INFO: data_ingestion: File already exists at: artifacts/data_ingestion/iris.csv]
+[2025-08-03 19:09:52,141: INFO: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-03 19:09:52,141: INFO: main: >>>>>>> Stage Data Validation Stage started <<<<<<<<]
+[2025-08-03 19:09:52,153: ERROR: main: 'local_data_file']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 27, in <module>
+    data_validation.initiate_data_validation()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_validation_pipeline.py", line 13, in initiate_data_validation
+    data_validation_config = config.get_data_validation_config()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 33, in get_data_validation_config
+    local_data_file=config["local_data_file"],
+KeyError: 'local_data_file'
+[2025-08-03 19:18:18,770: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:18:18,779: ERROR: main: DataIngestionConfig.__init__() got an unexpected keyword argument 'unzip_dir']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 21, in get_data_ingestion_config
+    return DataIngestionConfig(
+TypeError: DataIngestionConfig.__init__() got an unexpected keyword argument 'unzip_dir'
+[2025-08-03 19:19:37,096: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:19:37,101: ERROR: main: [Errno 2] No such file or directory: 'config\\schema.yaml']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_file_path)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\utils\common.py", line 8, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\schema.yaml'
+[2025-08-03 19:22:50,765: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:22:50,772: ERROR: main: [Errno 2] No such file or directory: 'config\\schema.yaml']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_file_path)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\utils\common.py", line 8, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\schema.yaml'
+[2025-08-03 19:26:33,609: INFO: utils: Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2025-08-03 19:26:33,611: INFO: utils: NumExpr defaulting to 8 threads.]
+[2025-08-03 19:26:34,568: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:26:34,572: ERROR: main: [Errno 2] No such file or directory: 'config\\schema.yaml']
+Traceback (most recent call last):
+  File "c:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "c:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_file_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\utils\common.py", line 8, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\schema.yaml'
+[2025-08-03 19:27:19,540: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:27:19,540: ERROR: main: [Errno 2] No such file or directory: 'config\\schema.yaml']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_file_path)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\utils\common.py", line 8, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\schema.yaml'
+[2025-08-03 19:28:16,841: INFO: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-03 19:28:16,841: ERROR: main: [Errno 2] No such file or directory: 'config\\schema.yaml']
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 13, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion_pipeline.py", line 12, in initiate_data_ingestion
+    config = ConfigurationManager()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 13, in __init__
+    self.schema = read_yaml(schema_file_path)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\utils\common.py", line 8, in read_yaml
+    with open(path_to_yaml, 'r') as yaml_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'config\\schema.yaml'

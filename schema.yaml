@@ -1,8 +1,0 @@
-COLUMNS:
-  sepalLength: float64
-  sepalWidth: float64
-  petalLength: float64
-  petalWidth: float64
-  species: str
-
-TARGET_COLUMN: species
