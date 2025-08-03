@@ -1,1 +1,54 @@
-[2025-08-01 17:33:53,670: INFO: main: main: welcome to our custom logging data science]
+[2025-08-02 16:57:27,278: INFO: main: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-02 16:57:27,286: ERROR: main: main: expected str, bytes or os.PathLike object, not NoneType]
+Traceback (most recent call last):
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\pipeline\data_ingestion.py", line 14, in initiate_data_ingestion
+    data_ingestion_config = config.get_data_ingestion_config()
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\src\datascienceproject\config\configuration.py", line 28, in get_data_ingestion_config
+    unzip_dir=Path(config['unzip_dir'])
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\venv\lib\pathlib.py", line 958, in __new__
+    self = cls._from_parts(args)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\venv\lib\pathlib.py", line 592, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "C:\Users\hr591\OneDrive\Desktop\DatascienceProject\venv\lib\pathlib.py", line 576, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+[2025-08-02 17:03:38,580: INFO: main: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-02 17:03:39,273: INFO: data_ingestion: data_ingestion: artifacts\data_ingestion\iris.csv downloaded! Info: 
+Connection: close
+Content-Length: 3858
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: text/plain; charset=utf-8
+ETag: "d1ae283e9a4cd53de5e784edb7fee7b363ca06aef5b946c9fa0574f27d58e2c8"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: F54B:251B1E:135DDD:330C79:688DF792
+Accept-Ranges: bytes
+Date: Sat, 02 Aug 2025 11:33:38 GMT
+Via: 1.1 varnish
+X-Served-By: cache-maa10227-MAA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1754134418.450731,VS0,VE253
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d6f56f03da1a23400aadce4b76fc924917576c80
+Expires: Sat, 02 Aug 2025 11:38:38 GMT
+Source-Age: 0
+
+]
+[2025-08-02 17:03:39,275: INFO: data_ingestion: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-02 17:03:39,276: INFO: main: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
+[2025-08-02 21:20:12,894: INFO: main: main: >>>>>>> Stage Data Ingestion Stage started <<<<<<<<]
+[2025-08-02 21:20:12,905: INFO: data_ingestion: data_ingestion: File already exists at: artifacts\data_ingestion\iris.csv]
+[2025-08-02 21:20:12,905: INFO: data_ingestion: data_ingestion: Skipping extraction as unzip_dir is not set.]
+[2025-08-02 21:20:12,905: INFO: main: main: >>>>>>> Stage Data Ingestion Stage completed <<<<<<<<
+
+x==========x]
