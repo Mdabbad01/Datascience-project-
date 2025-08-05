@@ -1,21 +1,28 @@
 from src.datascienceproject.constants import *
-from src.datascienceproject.utils.common import read_yaml
+from src.datascienceproject.utils.common import read_yaml, create_directories
+from src.datascienceproject.entity.config_entity import ModelTrainerConfig
 from src.datascienceproject.entity.config_entity import (
+    DataIngestionConfig,
     DataValidationConfig,
-    DataIngestionConfig
+    DataTransformationConfig
 )
-import os
+
 
 class ConfigurationManager:
-    def __init__(self, config_file_path=CONFIG_FILE_PATH, schema_file_path=SCHEMA_FILE_PATH):
-        self.config = read_yaml(config_file_path)
-        self.schema = read_yaml(schema_file_path)
+    def __init__(self,
+                 config_filepath=CONFIG_FILE_PATH,
+                 params_filepath=PARAMS_FILE_PATH,
+                 schema_filepath=SCHEMA_FILE_PATH):
 
-        os.makedirs(self.config.data_ingestion.root_dir, exist_ok=True)
-        os.makedirs(self.config.data_validation.root_dir, exist_ok=True)
+        self.config = read_yaml(config_filepath)
+        self.params = read_yaml(params_filepath)
+        self.schema = read_yaml(schema_filepath)
+
+        create_directories([self.config.artifacts_root])
 
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         config = self.config.data_ingestion
+        create_directories([config.root_dir])
         return DataIngestionConfig(
             root_dir=config.root_dir,
             source_url=config.source_URL,
@@ -24,9 +31,27 @@ class ConfigurationManager:
 
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
+        create_directories([config.root_dir])
         return DataValidationConfig(
             root_dir=config.root_dir,
-            local_data_file=self.config.data_ingestion.local_data_file,
-            all_schema=self.schema.COLUMNS,
-            STATUS_FILE=config.STATUS_FILE
+            data_path=self.config.data_ingestion.local_data_file,
+            validated_data_path=config.validated_data_path,
+            STATUS_FILE=config.STATUS_FILE,
+            all_schema=self.schema.COLUMNS
+        )
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+        create_directories([config.root_dir])
+        return DataTransformationConfig(
+            validated_data_path=config.data_path,  # Input: validated data
+            transformed_data_path=config.transformed_data_path  # Output path
+        )
+        
+        
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        return ModelTrainerConfig(
+            transformed_data_path=os.path.join("artifacts", "data_transformation", "transformed_iris.csv"),
+            model_path=os.path.join("artifacts", "model", "model.pkl"),
+            target_column="species"
         )

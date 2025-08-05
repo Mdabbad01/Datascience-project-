@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/hr591/OneDrive/Desktop/DatascienceProject/mlruns/944126955397651205/01fd9893d0d344999e69b3d94a46d855/artifacts
+end_time: 1754404007216
+entry_point_name: ''
+experiment_id: '944126955397651205'
+lifecycle_stage: active
+run_id: 01fd9893d0d344999e69b3d94a46d855
+run_name: LogReg_Train_Run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754404003319
+status: 3
+tags: []
+user_id: hr591
