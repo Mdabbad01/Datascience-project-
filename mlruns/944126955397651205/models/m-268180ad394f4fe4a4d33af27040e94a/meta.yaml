@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/hr591/OneDrive/Desktop/DatascienceProject/mlruns/944126955397651205/models/m-268180ad394f4fe4a4d33af27040e94a/artifacts
+creation_timestamp: 1754404003468
+experiment_id: '944126955397651205'
+last_updated_timestamp: 1754404007196
+model_id: m-268180ad394f4fe4a4d33af27040e94a
+model_type: null
+name: logistic_regression_model
+source_run_id: 01fd9893d0d344999e69b3d94a46d855
+status: 2
+status_message: null

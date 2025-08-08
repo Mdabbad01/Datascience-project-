@@ -1,7 +1,6 @@
 import pandas as pd
 import os
-from src.datascienceproject.components.data_ingestion import DataIngestion
-from src.datascienceproject.entity.config_entity import DataValidationConfig  # ✅ THIS LINE WAS MISSING
+from src.datascienceproject.entity.config_entity import DataValidationConfig 
 from src.datascienceproject import logger
 
 class DataValidation:
@@ -12,10 +11,9 @@ class DataValidation:
         try:
             validation_status = True
 
-            # Load the dataset
-            data = pd.read_csv(self.config.unzip_data_path)
+            # ✅ Load the ingested file from data_ingestion
+            data = pd.read_csv(self.config.data_path)
 
-            # Check if all expected columns are present
             expected_columns = list(self.config.all_schema.keys())
             actual_columns = list(data.columns)
 
@@ -25,6 +23,15 @@ class DataValidation:
             if expected_columns != actual_columns:
                 logger.warning("Column mismatch found!")
                 validation_status = False
+            else:
+                # ✅ Save the validated data to data_validation
+                os.makedirs(os.path.dirname(self.config.validated_data_path), exist_ok=True)
+                data.to_csv(self.config.validated_data_path, index=False)
+                logger.info(f"Validated data saved at: {self.config.validated_data_path}")
+
+            # ✅ Write the status to status file
+            with open(self.config.STATUS_FILE, 'w') as f:
+                f.write(f"Validation Status: {validation_status}")
 
             return validation_status
 
